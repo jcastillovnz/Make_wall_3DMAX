@@ -48,16 +48,19 @@ $.modifiers[#Edit_Poly].insetAmount = 0.02
 $.modifiers[#Edit_Poly].Commit ()
 $.modifiers[#Edit_Poly].SetOperation #ExtrudeFace
 $.modifiers[#Edit_Poly].extrudeFaceHeight = -0.04
+
 $.modifiers[#Edit_Poly].Commit ()
 	
-$.modifiers[#Edit_Poly].ButtonOp #DetachFace
-$.modifiers[#Edit_Poly].DetachToObject "Cara_interior"
 
-select $Cara_interior
-$.wirecolor = color 87 225 198
+$.modifiers[#Edit_Poly].ButtonOp #DetachFace	
+	select $Object
+$.wirecolor = color 87 225 198	
+	
+	
 select $Nuevo_muro
 macros.run "Modifier Stack" "Convert_to_Poly"
-	
+
+
 		)
 	
 	
